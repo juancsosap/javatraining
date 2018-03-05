@@ -18,7 +18,7 @@ public class E04_MyMicroSurvey {
 			String name = inConsole.nextLine();
 			
 			// Printing info in the console 
-			System.out.print("Edad (a�os): ");
+			System.out.print("Edad (años): ");
 			// Receiving String info from the user
 			Integer age = inConsole.nextInt();
 			
