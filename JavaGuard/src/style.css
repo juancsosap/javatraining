@@ -1,0 +1,38 @@
+.root {
+	-fx-background-color: #3399DD;
+	-fx-font: bold 18 Arial;
+}
+.label, .button, .check-box {
+	-fx-text-fill: #FFFFFF;
+}
+.label {
+	-fx-label-padding: 5 0 5 0;
+	-fx-alignment: center-left;
+}
+.button {
+	-fx-font-size: 12;
+	-fx-text-fill: #888888;
+}
+.check-box {
+	-fx-font-size: 14;
+}
+.new-button {
+	-fx-text-fill: #FFFFFF;
+	-fx-background-color: #88AAFF;
+}
+.final-button {
+	-fx-text-fill: #000000;
+	-fx-background-color: #BBFF55;
+	-fx-font-size: 20;
+}
+.label-error {
+	-fx-background-color: #FF0000;
+}
+.label-ok {
+	-fx-background-color: #00FF00;	
+}
+.label-msg {
+	-fx-background-radius: 20;
+	-fx-text-fill: #000000;
+	-fx-alignment: center;
+}
