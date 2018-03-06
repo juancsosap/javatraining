@@ -40,6 +40,15 @@ public class E02_VariableNames {
 		float myfloat = 1.111111F;
 		double mydouble = 1.11111111111;
 		
+		// Variables could be modified
+		int var = 5;
+		var = 10;
+		
+		final int CONST = 10;
+		// CONST = 20;
+		// constants could not be modified
+		// the name of the constants for convention are in upper case
+		
 	}
 
 }
