@@ -8,10 +8,16 @@ public class E01_PrintingLines {
 		printFullLine();
 		
 		String[] cities = { "Santiago", "Lima", "Bogota", "Caracas", "Brazilia", "Buenos Aires" };
-		printTable("Ciudades", cities);
+		printColumn("Ciudades", cities);
 		
 		String[] countries = { "Chile", "Perú", "Colombia", "Venezuela", "Brazil", "Argentina" };
-		printTable("Paices", countries);
+		printColumn("Paices", countries);
+		
+		printFullLine();
+		
+		String[][] capitals = { {"Chile", "Santiago"},    {"Perú", "Lima"},       {"Bogota", "Colombia"}, 
+				                {"Venezuela", "Caracas"}, {"Brazil", "Brazilia"}, {"Argentina", "Buenos Aires" } };
+		printTable("Capitales", new String[] {"Country", "City"}, capitals);
 		
 		printFullLine();
 	}
@@ -21,7 +27,6 @@ public class E01_PrintingLines {
 		printLine(40);
 	}
 	
-	// Overloading Method
 	private static void printLine(int length) {
 		String line = "";
 		for(int i = 0; i < length; i++)
@@ -38,12 +43,33 @@ public class E01_PrintingLines {
 			printItem(item);
 	}
 	
-	private static void printTable(String title, String[] data) {
+	private static void printColumn(String title, String[] data) {
 		printLine(20);
 		System.out.println("   " + title);
 		printLine(20);
 		printItems(data);
 		printLine(20);
+	}
+	
+	private static void printData(String[][] data) {
+		for(String[] value : data)
+			printRow(value);
+	}
+	
+	private static void printRow(String[] data) {
+		for(String value : data)
+			System.out.printf(" %-15s", value);
+		System.out.println();
+	}
+	
+	private static void printTable(String title, String[] fields, String[][] data) {
+		printLine(30);
+		System.out.println(" " + title);
+		printLine(30);
+		printRow(fields);
+		printLine(30);
+		printData(data);
+		printLine(30);
 	}
 	
 }
