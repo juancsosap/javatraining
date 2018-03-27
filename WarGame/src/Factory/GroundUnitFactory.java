@@ -2,9 +2,9 @@ package Factory;
 
 import java.util.ArrayList;
 
-import Elements.GroundUnit;
-import Elements.BasicTroopMediator;
-import Elements.Unit;
+import Troops.BasicTroopMediator;
+import Units.GroundUnit;
+import Units.Unit;
 import Weapons.IWeapon;
 
 public class GroundUnitFactory implements IUnitFactory {

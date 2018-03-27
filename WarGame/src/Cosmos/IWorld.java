@@ -1,8 +1,9 @@
 package Cosmos;
 
-public interface IWorld {
+import Communications.ISubject;
 
-	public void setName(String value);
-	public String getName();
+public interface IWorld extends ISubject {
+
+	public default String getURL() { return String.format("%s", this.getName()); }
 	
 }

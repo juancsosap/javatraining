@@ -1,9 +1,11 @@
 package Commands;
 
-import Elements.Unit;
+import Units.Unit;
 
 public interface ICommand {
 
-	public void execute(Unit troop);
+	public void execute(Unit unit);
+	
+	public String toString();
 	
 }

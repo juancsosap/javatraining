@@ -34,4 +34,9 @@ public class Point2D implements IPoint {
 	@Override
 	public int getDimentions() { return 2; }
 	
+	@Override
+	public String toString() {
+		return String.format("(%,.2f; %,.2f)", this.getX(), this.getY());
+	}
+	
 }

@@ -30,4 +30,9 @@ public class Point1D implements IPoint {
 	@Override
 	public int getDimentions() { return 1; }
 	
+	@Override
+	public String toString() {
+		return String.format("(%,.2f)", this.getX());
+	}
+	
 }

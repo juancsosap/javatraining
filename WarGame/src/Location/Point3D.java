@@ -38,5 +38,9 @@ public class Point3D implements IPoint {
 	@Override
 	public int getDimentions() { return 3; }
 
+	@Override
+	public String toString() {
+		return String.format("(%,.2f; %,.2f; %,.2f)", this.getX(), this.getY(), this.getZ());
+	}
 	
 }

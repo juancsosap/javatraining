@@ -1,6 +1,9 @@
 package Weapons;
 
-public interface IWeapon {
+import Cosmos.ICostable;
+import Cosmos.IRangeable;
+
+public interface IWeapon extends ICostable, IRangeable {
 	
 	public static final long BASIC_COST   = 50;
 	public static final long BASIC_WEIGHT = 20;

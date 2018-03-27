@@ -2,8 +2,8 @@ package Factory;
 
 import java.util.ArrayList;
 
-import Elements.BasicTroopMediator;
-import Elements.Unit;
+import Troops.BasicTroopMediator;
+import Units.Unit;
 import Weapons.IWeapon;
 
 public interface IUnitFactory {

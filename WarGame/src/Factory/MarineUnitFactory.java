@@ -2,9 +2,9 @@ package Factory;
 
 import java.util.ArrayList;
 
-import Elements.MarineUnit;
-import Elements.BasicTroopMediator;
-import Elements.Unit;
+import Troops.BasicTroopMediator;
+import Units.MarineUnit;
+import Units.Unit;
 import Weapons.IWeapon;
 
 public class MarineUnitFactory implements IUnitFactory {

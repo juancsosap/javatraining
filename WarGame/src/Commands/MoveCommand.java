@@ -1,7 +1,10 @@
 package Commands;
 
-import Elements.Unit;
+import java.util.logging.Level;
+
 import Location.IPoint;
+import Logging.GlobalLogger;
+import Units.Unit;
 
 public class MoveCommand implements ICommand {
 
@@ -15,9 +18,13 @@ public class MoveCommand implements ICommand {
 	public MoveCommand(IPoint point) { this(point, false); }
 
 	@Override
-	public void execute(Unit troop) {
-		if(this.absolute) troop.setPossition(this.point);
-		else troop.getPossition().add(this.point);
+	public void execute(Unit unit) {
+		if(this.absolute) unit.setPossition(this.point);
+		else unit.getPossition().add(this.point);
+		GlobalLogger.getLogger().log(unit, Level.INFO, "MoveCommand Executed to the point " + unit.getPossition());
 	}
+	
+	@Override
+	public String toString() { return "Move Command"; }
 
 }

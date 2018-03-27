@@ -44,5 +44,7 @@ public interface IPoint {
     public double[] toArray();
     public void fromArray(double[] array) throws IllegalArgumentException;
     public int getDimentions();
+    
+    public String toString();
 
 }

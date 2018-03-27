@@ -1,8 +1,9 @@
 package Communications;
 
 import Commands.ICommand;
+import Cosmos.ILocalable;
 
-public interface ISubject {
+public interface ISubject extends ILocalable {
 
 	public void register(IObserver ob);
 	public void unregister(IObserver ob);
