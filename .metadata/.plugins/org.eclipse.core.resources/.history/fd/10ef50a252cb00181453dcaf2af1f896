@@ -1,0 +1,53 @@
+package oca;
+
+public class opp {
+
+	public static void main(String[] args) {
+		
+		Gente juan = new Gente("Juan", "Sosa");
+		
+		System.out.println(juan.nombreCompleto());
+		
+		Gente ana = new Gente("Ana", "Prada");
+		
+		juan.castigarse(ana);
+		
+		System.out.println(juan.nombreCompleto());
+		
+	}
+
+}
+
+class Gente {
+	
+	private String nombre = "NOM";
+	private String apellido = "APE";
+	private int edad = 0;
+	private boolean esHombre = false;
+	private boolean casado = false;
+	
+	public Gente(String nombre, String apellido) {
+		this.nombre = nombre;
+		this.apellido = apellido;
+	}
+	
+	void crecer() {
+		edad++;
+	}
+	
+	String nombreCompleto() {
+		return nombre + " " + apellido;
+	}
+	
+	void castigarse(Gente pareja) {
+		if(!esHombre) {
+			apellido = pareja.apellido + " " + apellido;
+		}
+		casado = true;
+	}
+	
+	void liberarse() {
+		casado = false;
+	}
+	
+}

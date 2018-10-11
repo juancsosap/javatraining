@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;oca.Padre.feliz&apos; in &apos;oca.Padre&apos;&#x0A;- Original project: &apos;JavaOCAP&apos;&#x0A;- Original element: &apos;oca.Padre.feliz&apos;&#x0A;- Getter method name: &apos;esFeliz&apos;&#x0A;- Setter method name: &apos;setFeliz&apos;&#x0A;- Field visibility: &apos;public&apos;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;feliz&apos;" flags="589830" getter="esFeliz" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;oca{opp.java[Padre^feliz" insertion="0" setter="setFeliz" stamp="1539043015092" version="1.0" visibility="1"/>
+</session>

@@ -1,0 +1,14 @@
+.root {
+	-fx-font: 16 Arial;
+	-fx-background-color: #55AAFF;
+	-fx-text-fill: #999999;
+}
+.user-label, .time-label {
+	-fx-font: 10 Arial;
+}
+.time-label {
+	-fx-text-fill: #0000FF;
+}
+.user-label {
+	-fx-text-fill: #FF0000;
+}

@@ -1,0 +1,40 @@
+package oca;
+
+public class opp {
+
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}
+
+class Gente {
+	
+	private String nombre;
+	private String apellido;
+	private int edad = 0;
+	private boolean esHombre = true;
+	private boolean casado = false;
+	
+	void crecer() {
+		edad++;
+	}
+	
+	String nombreCompleto() {
+		return nombre + " " + apellido;
+	}
+	
+	void castigarse(Gente pareja) {
+		if(!esHombre) {
+			apellido = pareja.apellido + apellido;
+		}
+		casado = true;
+	}
+	
+	void liberarse() {
+		casado = false;
+	}
+	
+}

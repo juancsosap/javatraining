@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFX.ControlerJavaFX">
+	<HBox>
+		<Label text="Nick: "/>
+		<Label fx:id="nick"/>
+	</HBox>
+	
+	<HBox>
+		<Label text="Email: "/>
+		<Label text="${nick.text}"/>
+		<Label text="\@gmail.com"/>
+	</HBox>
+	
+	<Label text="Gender: "/>
+	<fx:define><ToggleGroup fx:id="toggleGroup"/></fx:define>
+	<RadioButton text="Male" toggleGroup="$toggleGroup"/>
+	<RadioButton text="Female" toggleGroup="$toggleGroup"/>
+	<RadioButton text="Not Specified" toggleGroup="$toggleGroup"/>
+	
+	<Button text="Done" fx:id="doneButton" onAction="#doneButtonHandler"/>
+	<Label fx:id="msg"/>
+</VBox>
+
