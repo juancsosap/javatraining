@@ -3,7 +3,7 @@ package P10_Generics;
 import java.util.ArrayList;
 
 @SuppressWarnings("unused")
-public class DaoExample {
+public class E07_DaoExample {
 
 	public static void main(String[] args) {
 		
