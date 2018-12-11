@@ -22,6 +22,11 @@ public class E03_MapStream {
 		words.stream().flatMap(n -> Stream.of(n.split("")))
                       .forEach(c -> System.out.print(c + "-"));
 
+		words.stream().map(n -> n.toUpperCase())
+        			  .forEach(System.out::println);
+		
+		String texto = words.stream().reduce((t1, t2) -> t1 + t2).get();
+		System.out.println(texto);
 		
 	}
 
