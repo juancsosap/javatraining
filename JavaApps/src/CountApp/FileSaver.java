@@ -12,6 +12,7 @@ import java.util.Map;
 public class FileSaver {
 
 	public static void save(Map<String, Integer> input, String path) throws IOException {
+		System.out.println("Saving file " + path);
 		Path file = Paths.get(path);
 		if(!Files.exists(file)) Files.createFile(file);
 		List<String> lines = new ArrayList<>();

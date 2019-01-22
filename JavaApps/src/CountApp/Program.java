@@ -1,37 +1,34 @@
 package CountApp;
 
-import java.io.IOException;
+import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class Program {
 
 	public static void main(String[] args) {
 		
-		try {
-			List<Map<String, Integer>> list = new ArrayList<>();
-			
-			String url1 = "https://www.ietf.org/rfc/rfc1918.txt";
-			String text1 = Downloader.download(url1);
-			Map<String, Integer> output1 = WordCounter.count(text1);
-			FileSaver.save(output1, "test1.txt");
-			list.add(output1);
-			
-			String url2 = "https://www.ietf.org/rfc/rfc1919.txt";
-			String text2 = Downloader.download(url2);
-			Map<String, Integer> output2 = WordCounter.count(text2);
-			FileSaver.save(output2, "test2.txt");
-			list.add(output2);
-			
-			Map<String, Integer> output = Analytics.analyze(20, list);
-			for(String key : output.keySet()) {
-				System.out.println(key + " : " + output.get(key));
-			}
-			
-		} catch (IOException e) {
-			System.out.println("Error : " + e.getMessage());
-		}
+		App myApp = new App();
+        
+        List<String> files = new ArrayList<>();
+        for(int i = 1; i < 100; i++) {
+            files.add("rfc" + i + ".txt");
+        }
+        
+        
+        LocalDateTime tini = LocalDateTime.now();
+        myApp.init("https://tools.ietf.org/rfc/", files, "output/", 10, true);
+        LocalDateTime tend = LocalDateTime.now();
+        Duration tdif = Duration.between(tini, tend);
+        
+        LocalDateTime sini = LocalDateTime.now();
+        myApp.init("https://tools.ietf.org/rfc/", files, "output/", 10, false);
+        LocalDateTime send = LocalDateTime.now();
+        Duration sdif = Duration.between(sini, send);
+        
+        System.out.println("Time Excecution with Threads : " + tdif.getSeconds() + " seconds");
+        System.out.println("Time Excecution without Threads : " + sdif.getSeconds() + " seconds");
 
 	}
 
