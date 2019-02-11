@@ -50,18 +50,18 @@ public class Scanner {
         return links.stream();
     };
     
-    private static Function<String, String> urlAbsoluter = (url) -> {
+    public static Function<String, String> urlAbsoluter = (url) -> {
     	if(url.length() == 0) return base;
     	if(url.matches("^(.{3,}:)?//.+$")) return url;
         if(url.charAt(0) == '/') return domain + url;
         return base + url;
     };
     
-    private static Predicate<String> inDomain = (url) -> {
+    public static Predicate<String> inDomain = (url) -> {
         return getDomain(url).equals(domain);
     };
     
-    private static String getDomain(String url) {
+    public static String getDomain(String url) {
     	int end = url.indexOf("/", 10);
         return (end == -1) ? url : url.substring(0, end);
     }
