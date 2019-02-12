@@ -27,6 +27,8 @@ public class Scanner {
             return lines.stream().flatMap(hrefGetter)
                                  .map(urlAbsoluter)
                                  .filter(inDomain)
+                                 .map(queryStringRemover)
+                                 .distinct()
                                  .collect(Collectors.toSet());
             
         } catch (IOException ex) {
@@ -55,6 +57,12 @@ public class Scanner {
     	if(url.matches("^(.{3,}:)?//.+$")) return url;
         if(url.charAt(0) == '/') return domain + url;
         return base + url;
+    };
+    
+    public static Function<String, String> queryStringRemover = (url) -> {
+        int index = url.indexOf("?");
+        if(index != -1) return url.substring(0, index);
+        else return url;
     };
     
     public static Predicate<String> inDomain = (url) -> {
