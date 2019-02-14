@@ -15,7 +15,7 @@ public class Saver {
     
     public void save(String url) {
         int index = url.lastIndexOf("/");
-        String file = url.substring(index+1);
+        String file = url.substring(index+1).replace("%20", " ");
         String folder = url.replace(Scanner.getDomain(url), "")
                            .replace(file, "")
                            .substring(1);
