@@ -27,6 +27,16 @@ public class E02_TextRotation {
 			for(int i = 0; i <= maxIndex; i++)
 				reverseText += value.charAt(maxIndex - i);
 			
+			/*
+            for(int i = maxIndex; i >= 0; i--)
+				reverseText += value.charAt(i);
+			*/
+			
+            /*
+            StringBuilder text = new StringBuilder(value);
+            reverseText = text.reverse().toString();
+            */
+			
 			System.out.println("Invertido: ");
 			System.out.println(reverseText);	
 									

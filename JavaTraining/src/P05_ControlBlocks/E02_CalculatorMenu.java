@@ -20,37 +20,49 @@ public class E02_CalculatorMenu {
 			System.out.println();
 			
 			System.out.print("Opción: ");
-			int option = inConsole.nextInt();
+			char option = inConsole.nextLine().charAt(0);
 			
-			if(option > 0 && option < 5) {
-				
-				System.out.print("NUM1: ");
-				double num1 = inConsole.nextDouble();
-				
-				System.out.print("NUM2: ");
-				double num2 = inConsole.nextDouble();
-				
-				System.out.println();
-				
-				switch(option) {
-					case 1:
-						num1 += num2;
-						break;
-					case 2:
-						num1 -= num2;
-						break;
-					case 3:
-						num1 *= num2;
-						break;
-					case 4:
-						num1 /= num2;
-						break;
-				}
-				
-				System.out.println("RESULT: " + num1);
-				
-			} else {
-				System.out.println("Opción no Valida");
+			System.out.print("NUM1: ");
+			double num1 = inConsole.nextDouble();
+			
+			System.out.print("NUM2: ");
+			double num2 = inConsole.nextDouble();
+			
+			System.out.println();
+			
+			/*
+			double result;
+            if(option == '1' || option == 's' || option == 'S') result = num1 + num2;
+            else if(option == '1' || option == 's' || option == 'S') result = num1 - num2;
+            else if(option == '1' || option == 's' || option == 'S') result = num1 * num2;
+            else if(option == '1' || option == 's' || option == 'S') result = num1 / num2;
+            else result = null;
+            System.out.println((result == null) ? "Opción no Valida" : "RESULT: " + result);
+			*/
+
+            /*
+            System.out.println((option == '1' || option == 's' || option == 'S') ? "RESULT: " + (num1 + num2) :
+                               (option == '2' || option == 'r' || option == 'R') ? "RESULT: " + (num1 - num2) :
+                               (option == '3' || option == 'm' || option == 'M') ? "RESULT: " + (num1 * num2) :
+                               (option == '4' || option == 'd' || option == 'D') ? "RESULT: " + (num1 / num2) : 
+                                                                                   "Opción no Valida"));
+            */
+			
+			switch(option) {
+				case '1': case 's': case 'S': 
+					System.out.println("RESULT: " + (num1+num2));
+					break;
+				case '2': case 'r': case 'R':
+					System.out.println("RESULT: " + (num1-num2));
+					break;
+				case '3': case 'm': case 'M':
+					System.out.println("RESULT: " + (num1*num2));
+					break;
+				case '4': case 'd': case 'D':
+					System.out.println("RESULT: " + (num1/num2));
+					break;
+				default:
+					System.out.println("Opción no Valida");	
 			}
 			
 		}
