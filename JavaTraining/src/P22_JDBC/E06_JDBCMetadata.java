@@ -13,7 +13,8 @@ public class E06_JDBCMetadata {
 	public static void main(String[] args) throws SQLException {
 		
 		// Driver is required
-		try(Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/World?useSSL=false", "root", "roottoor")) {
+		String connString = getConnectionString();
+		try(Connection conn = DriverManager.getConnection(connString, "root", "roottoor")) {
 			
 			DatabaseMetaData dbmd = conn.getMetaData();
 			
@@ -66,6 +67,20 @@ public class E06_JDBCMetadata {
 			
 		}
 		
+	}
+	
+	private static String getConnectionString() {
+		String driver = "jdbc:mysql";
+		String host = "localhost";
+		int port = 3306;
+		String database = "World";
+		String options = "useSSL=false&"
+		        + "useUnicode=true&"
+		        + "useJDBCCompliantTimezoneShift=true&"
+		        + "useLegacyDatetimeCode=false&"
+		        + "serverTimezone=UTC";
+		
+		return String.format("%s://%s:%s/%s?%s", driver, host, port, database, options);
 	}
 	
 }

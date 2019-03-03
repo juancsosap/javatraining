@@ -25,6 +25,13 @@ public class E02_SquareList {
 		    	values[i] = inConsole.nextInt();
 		    }
 		    
+		    /* Invalid Assignation of variables when for each loop is used 
+            for(int value : values) {
+				System.out.print("Valor : ");
+				value = inConsole.nextInt();
+			}
+			*/
+		    
 		    // Printing the result
 		    System.out.println("\nEl cuadrado de los números suministrados es: ");
 		    for(int value : values)

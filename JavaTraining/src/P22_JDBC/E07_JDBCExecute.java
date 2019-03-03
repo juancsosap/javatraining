@@ -55,7 +55,11 @@ public class E07_JDBCExecute {
 		String host = "localhost";
 		int port = 3306;
 		String database = "World";
-		String options = "useSSL=false";
+		String options = "useSSL=false&"
+		        + "useUnicode=true&"
+		        + "useJDBCCompliantTimezoneShift=true&"
+		        + "useLegacyDatetimeCode=false&"
+		        + "serverTimezone=UTC";
 		
 		return String.format("%s://%s:%s/%s?%s", driver, host, port, database, options);
 	}

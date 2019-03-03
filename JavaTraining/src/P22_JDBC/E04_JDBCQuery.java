@@ -44,7 +44,12 @@ public class E04_JDBCQuery {
 		String database = "World";
 		String user = "root";
 		String password = "roottoor";
-		String options = "useSSL=false&user=" + user + "&password=" + password;
+		String options = "useSSL=false&"
+		        + "useUnicode=true&"
+		        + "useJDBCCompliantTimezoneShift=true&"
+		        + "useLegacyDatetimeCode=false&"
+		        + "serverTimezone=UTC";
+		options += "&user=" + user + "&password=" + password;
 		
 		return String.format("%s://%s:%s/%s?%s", driver, host, port, database, options);
 	}

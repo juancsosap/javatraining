@@ -16,19 +16,31 @@ public class E13_JDBCStoredProceduresOutParameter {
 		try(Connection conn = DriverManager.getConnection(connString, "root", "roottoor");
 			Scanner console = new Scanner(System.in)) {
 			
+			// Create Table
+            
+            /*
+               CREATE TABLE person (
+                   id INT NOT NULL AUTO_INCREMENT UNIQUE,
+                   name VARCHAR(100) NOT NULL,
+                   surname VARCHAR(100) NOT NULL)
+            
+               INSERT INTO person (name, surname) VALUES ("Juan", "Sosa");
+               INSERT INTO person (name, surname) VALUES ("Carlos", "Perez");
+               INSERT INTO person (name, surname) VALUES ("Ana", "Gomez");
+            */
+       
 			// Create Procedure
 			
 			/*
-			 *  DELIMITER //
-			 *  
-			 *  CREATE PROCEDURE GetEmail(IN idPerson INT, OUT email CHAR(100))
-			 *  BEGIN 
-			 *    SELECT CONCAT(LOWER(name), '.', LOWER(surname), '\@mycompany.com') INTO email FROM person WHERE id=idPerson; 
-			 *  END //
-			 *  
-			 *  DELIMITER ;
-			 * 
-			 */
+			  DELIMITER //
+			  
+			  CREATE PROCEDURE GetEmail(IN idPerson INT, OUT email CHAR(100))
+			  BEGIN 
+			    SELECT CONCAT(LOWER(name), '.', LOWER(surname), '\@mycompany.com') INTO email FROM person WHERE id=idPerson; 
+			  END //
+			  
+			  DELIMITER ;
+			*/
 			
 			System.out.println("GET EMAIL");
 			
@@ -56,7 +68,12 @@ public class E13_JDBCStoredProceduresOutParameter {
 		String host = "localhost";
 		int port = 3306;
 		String database = "netec";
-		String options = "useSSL=false";
+		String options = "useSSL=false&"
+				        + "useUnicode=true&"
+				        + "useJDBCCompliantTimezoneShift=true&"
+				        + "useLegacyDatetimeCode=false&"
+				        + "serverTimezone=UTC";
+		
 		
 		return String.format("%s://%s:%s/%s?%s", driver, host, port, database, options);
 	}
