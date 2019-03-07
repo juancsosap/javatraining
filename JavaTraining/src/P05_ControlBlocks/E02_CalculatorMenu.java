@@ -48,6 +48,7 @@ public class E02_CalculatorMenu {
                                                                                    "Opción no Valida"));
             */
 			
+			// Only Integer values are supported (byte, short, int, long, char or enums)
 			switch(option) {
 				case '1': case 's': case 'S': 
 					System.out.println("RESULT: " + (num1+num2));
