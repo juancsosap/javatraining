@@ -19,4 +19,10 @@ public class Zone {
     public int getId() { return this.id; }
     public String getName() { return this.name; }
     
+    @Override
+    public boolean equals(Object obj) {
+        Zone zone = (Zone) obj;
+        return this.getId() == zone.getId();
+    }
+    
 }

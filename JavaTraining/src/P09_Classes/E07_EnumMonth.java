@@ -11,10 +11,19 @@ public class E07_EnumMonth {
 			System.out.print(day + " ");
 		}
 		
+		System.out.println(State.UP);
+		System.out.println(State.UP);
+		System.out.println(State.UP);
+		
+		/*
+		System.out.println(State.DOWN);
+		System.out.println(State.DOWN);
+		System.out.println(State.DOWN);
+        	*/
 	}
 	
 	private enum Day { SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY }
-	
+
 	private enum Month {
 		
 		JANUARY("Enero"),
@@ -41,5 +50,14 @@ public class E07_EnumMonth {
 		}
 		
 	}
+	
+	private enum State { 
+            UP(), DOWN();
+            private State() {
+                System.out.println("Building Object");
+            }
+        }
+
+    }
 
 }

@@ -41,25 +41,37 @@ public class CardDAO implements DAO<Card, Integer> {
             String sql = "SELECT * FROM card WHERE id=?";
             ResultSet rs = conn.executeQuery(sql, id);
             rs.next();
+            boolean active = rs.getBoolean("active");
             Person person = (new PersonDAO()).retrive(rs.getInt("id_person"));
-            sql = "SELECT * FROM permision WHERE id_card=?";
-            rs = conn.executeQuery(sql, id);
-            ArrayList<Zone> zones = new ArrayList<>();
-            ZoneDAO zDAO = new ZoneDAO();
-            while(rs.next()) {
-                zones.add(zDAO.retrive(rs.getInt("id_zone")));
-            }
-            return new Card(rs.getInt("id"), person, rs.getBoolean("active"), zones);
+            ArrayList<Zone> zones = retriveZones(id);
+            return new Card(id, person, active, zones);
         } catch (SQLException ex) {}
         return null;
     }
     
     public Card retrive(Person person) {
         try {
-            String sql = "SELECT * FROM zone WHERE name=?";
-            ResultSet rs = conn.executeQuery(sql, name);
+            String sql = "SELECT * FROM card WHERE id_person=?";
+            ResultSet rs = conn.executeQuery(sql, person.getId());
             rs.next();
-            return new Card(rs.getInt("id"), rs.getString("name"));
+            int id = rs.getInt("id");
+            boolean active = rs.getBoolean("active");
+            ArrayList<Zone> zones = retriveZones(id);
+            return new Card(id, person, active, zones);
+        } catch (SQLException ex) {}
+        return null;
+    }
+    
+    public ArrayList<Zone> retriveZones(int id_card) {
+        try {
+            String sql = "SELECT * FROM permision WHERE id_card=?";
+            ResultSet rs = conn.executeQuery(sql, id_card);
+            ArrayList<Zone> zones = new ArrayList<>();
+            ZoneDAO zDAO = new ZoneDAO();
+            while(rs.next()) {
+                zones.add(zDAO.retrive(rs.getInt("id_zone")));
+            }
+            return zones;
         } catch (SQLException ex) {}
         return null;
     }
@@ -67,11 +79,15 @@ public class CardDAO implements DAO<Card, Integer> {
     @Override
     public List<Card> retrive() {
         try {
-            String sql = "SELECT * FROM zone";
+            String sql = "SELECT * FROM card";
             ResultSet rs = conn.executeQuery(sql);
             List<Card> result =  new ArrayList<>();
             while(rs.next()) {
-                result.add(new Card(rs.getInt("id"), rs.getString("name")));
+                int id = rs.getInt("id");
+                Person person = (new PersonDAO()).retrive(rs.getInt("id_person"));
+                boolean active = rs.getBoolean("active");
+                ArrayList<Zone> zones = retriveZones(id);
+                result.add(new Card(id, person, active, zones));
             }
             return result;
         } catch (SQLException ex) {}
@@ -81,8 +97,27 @@ public class CardDAO implements DAO<Card, Integer> {
     @Override
     public Card update(Card obj) {
         try {
-            String sql = "UPDATE zone SET name=? WHERE id=?";
-            int quantity = conn.executeUpdate(sql, obj.getName(), obj.getId());
+            String sql = "UPDATE card SET id_person=?, active=? WHERE id=?";
+            int quantity = conn.executeUpdate(sql, obj.getPerson().getId(), obj.isActive(), obj.getId());
+            ArrayList<Zone> zones = retriveZones(obj.getId());
+            List<Zone> objzones = obj.getZones();
+            for(Zone dbzone : zones) {
+                boolean delzone = true;
+                for(int i = 0; i < objzones.size(); i++) {    
+                    if(dbzone.getId() == objzones.get(i).getId()) {
+                        delzone = false;
+                        objzones.remove(i);
+                    }
+                }
+                if(delzone) {
+                    sql = "DELETE FROM permision WHERE id_card=?";
+                    conn.executeUpdate(sql, dbzone.getId());
+                }            
+            }
+            sql = "INSERT INTO permision SET (id_card, id_zone) VALUES (?, ?)";
+            for(Zone objzone : objzones) {
+                conn.executeUpdate(sql, obj.getId(), objzone.getId());            
+            }
             if(quantity == 1) {
                 return retrive(obj.getId());
             }
@@ -93,7 +128,9 @@ public class CardDAO implements DAO<Card, Integer> {
     @Override
     public Card delete(Card obj) {
         try {
-            String sql = "DELETE FROM zone WHERE id=?";
+            String sql = "DELETE FROM permision WHERE id_card=?";
+            conn.executeUpdate(sql, obj.getId());
+            sql = "DELETE FROM card WHERE id=?";
             int quantity = conn.executeUpdate(sql, obj.getId());
             if(quantity == 1) {
                 return obj;
