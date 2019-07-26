@@ -11,7 +11,7 @@ public class People {
 		this.people = new HashSet<>();
 	}
 	
-	private People(Stream<Person> peopleStream) {
+	public People(Stream<Person> peopleStream) {
 		this();
     	peopleStream.forEach(p -> this.people.add(p));
 	}
