@@ -1,4 +1,4 @@
-package ocp;
+package Primes;
 
 public class PrimosSimetricos {
 

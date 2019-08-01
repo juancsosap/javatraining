@@ -1,4 +1,4 @@
-package ocp;
+package Primes;
 
 import java.util.function.BiConsumer;
 

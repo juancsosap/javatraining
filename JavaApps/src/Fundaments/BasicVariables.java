@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class BasicVariables {
 
-	@SuppressWarnings("unused")
+	@SuppressWarnings({ "unused", "deprecation" })
 	public static void main(String[] args) {
 		
 		byte edad = 100; // 1Byte

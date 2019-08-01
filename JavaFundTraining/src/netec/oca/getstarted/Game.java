@@ -1,4 +1,4 @@
-package oca;
+package netec.oca.getstarted;
 
 public class Game {
     

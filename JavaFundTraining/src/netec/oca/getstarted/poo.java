@@ -1,10 +1,10 @@
-package oca;
+package netec.oca.getstarted;
 
 import java.util.ArrayList;
 
 public class poo {
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@SuppressWarnings({ "unchecked", "rawtypes", "unused" })
 	public static void main(String[] args) {
 		
 		ArrayList a = new ArrayList();

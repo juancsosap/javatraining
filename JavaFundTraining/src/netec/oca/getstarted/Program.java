@@ -1,4 +1,4 @@
-package oca;
+package netec.oca.getstarted;
 
 public class Program {
 
@@ -7,13 +7,13 @@ public class Program {
 		
 		System.out.println("Hello World");
 		
-		Persona p1 = new Persona();
+		PersonaNew p1 = new PersonaNew();
 		
 		p1.nombre = "Ju";
 		
 		p1.nombre = p1.nombre + "an";
 		
-		Persona p2 = new Persona();
+		PersonaNew p2 = new PersonaNew();
 		
 		p2.nombre = "Juan";
 		
@@ -51,7 +51,7 @@ public class Program {
 
 }
 
-class Persona {
+class PersonaNew {
 	
 	String nombre;
 	

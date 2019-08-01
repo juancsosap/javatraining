@@ -1,11 +1,12 @@
-package oca;
+package netec.oca.getstarted;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class InterfacesExamples {
 
-    public static void main(String[] args) {
+    @SuppressWarnings("unused")
+	public static void main(String[] args) {
         
         //Box<String> d1 = new Box<>("1");
         

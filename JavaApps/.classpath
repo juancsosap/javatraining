@@ -8,6 +8,5 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="/home/juancsosap/Documents/repo/java/JavaTraining/lib/mysql-connector-java-8.0.15.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFX"/>
-	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
