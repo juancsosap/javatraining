@@ -2,6 +2,7 @@ package P09_Classes;
 
 public class E08_Static {
 
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		System.out.println("Starting Program");
 		

@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 public class E08_StringBuildervsString {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		
 		LocalDateTime ini = LocalDateTime.now();
