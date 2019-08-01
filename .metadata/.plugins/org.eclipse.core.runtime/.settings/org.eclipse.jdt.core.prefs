@@ -6,3 +6,4 @@ org.eclipse.jdt.core.compiler.compliance=1.8
 org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
 org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
 org.eclipse.jdt.core.compiler.source=1.8
+org.eclipse.jdt.core.userLibrary.JavaFX=<?xml version\="1.0" encoding\="UTF-8"?>\n<userlibrary systemlibrary\="false" version\="2">\n\t<archive path\="/usr/java/javafx-sdk-11.0.2/lib/javafx-swt.jar"/>\n\t<archive path\="/usr/java/javafx-sdk-11.0.2/lib/javafx.web.jar"/>\n\t<archive path\="/usr/java/javafx-sdk-11.0.2/lib/javafx.swing.jar"/>\n\t<archive path\="/usr/java/javafx-sdk-11.0.2/lib/javafx.media.jar"/>\n\t<archive path\="/usr/java/javafx-sdk-11.0.2/lib/javafx.graphics.jar"/>\n\t<archive path\="/usr/java/javafx-sdk-11.0.2/lib/javafx.fxml.jar"/>\n\t<archive path\="/usr/java/javafx-sdk-11.0.2/lib/javafx.controls.jar"/>\n\t<archive path\="/usr/java/javafx-sdk-11.0.2/lib/javafx.base.jar"/>\n</userlibrary>\n
