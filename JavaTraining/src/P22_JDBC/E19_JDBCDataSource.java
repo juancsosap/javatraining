@@ -11,7 +11,7 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import com.mysql.cj.jdbc.MysqlDataSource;
 
 public class E19_JDBCDataSource {
 
@@ -63,7 +63,11 @@ public class E19_JDBCDataSource {
 			mds.setURL(Config.get("url"));
 			mds.setUser(Config.get("user"));
 			mds.setPassword(Config.get("password"));
-			mds.setRequireSSL(false);
+			try {
+				mds.setRequireSSL(false);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 			return mds;
 		}
 		

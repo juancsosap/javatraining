@@ -11,7 +11,7 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import com.mysql.cj.jdbc.MysqlDataSource;
 
 public class E24_JDBCResultSetTypes {
 

@@ -23,7 +23,7 @@ public class BruteForce extends Application {
 	private final String UPPERCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	private final String LOWERCHARS = "abcdefghijklmnopqrstuvwxyz";
 	private final String NUMBERS = "0123456789";
-	private final String SYMBOLS = ".:,;-_<>?¿!¡#$%&/\\\"'()[]{}+*=~°|^ ";
+	private final String SYMBOLS = ".:,;-_<>?ï¿½!ï¿½#$%&/\\\"'()[]{}+*=~ï¿½|^ ";
 	
 	private Label lbLength, lbCharacters;
 	private TextField tfLength, tfPassword, tfValues, tfCharacteres, tfTime;

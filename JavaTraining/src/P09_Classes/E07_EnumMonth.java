@@ -52,12 +52,10 @@ public class E07_EnumMonth {
 	}
 	
 	private enum State { 
-            UP(), DOWN();
-            private State() {
-                System.out.println("Building Object");
-            }
+        UP(), DOWN();
+        private State() {
+            System.out.println("Building Object");
         }
-
     }
 
 }

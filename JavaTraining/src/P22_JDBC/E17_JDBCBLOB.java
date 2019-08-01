@@ -122,7 +122,7 @@ public class E17_JDBCBLOB {
 	}
 	
 	private static String getConnectionString() {
-		String driver = "jdbc:mysql";"%s://%s:%s/%s?%s"
+		String driver = "jdbc:mysql";
 		String host = "localhost";
 		int port = 3306;
 		String database = "netec";
@@ -132,7 +132,7 @@ public class E17_JDBCBLOB {
 		        + "useLegacyDatetimeCode=false&"
 		        + "serverTimezone=UTC";
 		
-		return String.format(, driver, host, port, database, options);
+		return String.format("%s://%s:%s/%s?%s", driver, host, port, database, options);
 	}
 	
 }
