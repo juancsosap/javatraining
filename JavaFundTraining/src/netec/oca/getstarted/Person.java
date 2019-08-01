@@ -44,7 +44,7 @@ public abstract class Person {
 		if(name.length() > 3) {
 			this.name = name;
 		} else {
-			throw new Exception("El nombre debe tener más de 3 caracteres");
+			throw new Exception("El nombre debe tener mï¿½s de 3 caracteres");
 		}
 	}
 	

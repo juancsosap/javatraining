@@ -51,7 +51,7 @@ public class DataTypes {
 		char character3 = 50;
 		System.out.println(character3);
 		
-		String texto1 = "rdtfyhjioklñ";
+		String texto1 = "rdtfyhjioklï¿½";
 		
 		int numero1 = 5;
 		int numero2 = 10;

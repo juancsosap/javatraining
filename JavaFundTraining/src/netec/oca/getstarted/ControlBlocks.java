@@ -23,7 +23,7 @@ public class ControlBlocks {
 		int edad = 70;
 		
 		if(edad < 10) {
-			System.out.println("Niño");
+			System.out.println("Niï¿½o");
 		} else {
 			if(edad < 18) {
 				System.out.println("Adolecente");
@@ -32,10 +32,10 @@ public class ControlBlocks {
 			}
 		}
 		
-		System.out.println(edad < 10 ? "Niño" : edad < 18 ? "Adolecente" : "Adulto");
+		System.out.println(edad < 10 ? "Niï¿½o" : edad < 18 ? "Adolecente" : "Adulto");
 		
 		if(edad < 10) {
-			System.out.println("Niño");
+			System.out.println("Niï¿½o");
 		} else if(edad < 18) {
 			System.out.println("Adolecente");
 		} else if(edad < 60) {
@@ -46,7 +46,7 @@ public class ControlBlocks {
 			System.out.println("Abuelo");
 		}
 		
-		System.out.println(edad < 10 ? "Niño" : 
+		System.out.println(edad < 10 ? "Niï¿½o" : 
 			               edad < 18 ? "Adolecente" : 
 			               edad < 60 ? "Adulto" : 
 			               edad < 80 ? "Adulto Mayor" : 
@@ -91,8 +91,8 @@ public class ControlBlocks {
 		    case "U":
 				System.out.println("VOCAL");
 				break;
-		    case "Ñ":
-		    	System.out.println("ESPAÑOL");
+		    case "ï¿½":
+		    	System.out.println("ESPAï¿½OL");
 			default:
 				System.out.println("CONSONANTE");
 		}
