@@ -7,4 +7,8 @@
 	<section name="RefactoringPropertyPage">
 		<item key="org.eclipse.ltk.ui.refactoring.sortRefactorings" value="true"/>
 	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item key="moveWizard.updateQualifiedNames" value="false"/>
+		<item key="patterns" value="*"/>
+	</section>
 </section>
