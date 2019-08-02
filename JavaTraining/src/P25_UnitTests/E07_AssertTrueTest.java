@@ -95,6 +95,7 @@ public class E07_AssertTrueTest {
 		}
 		
 		// Assert
+		Assert.assertEquals(true, throwsed);
 		Assert.assertTrue(throwsed);
 	}
 	

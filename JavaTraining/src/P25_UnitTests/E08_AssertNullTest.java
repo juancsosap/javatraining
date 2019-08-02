@@ -45,6 +45,7 @@ public class E08_AssertNullTest {
 		Assert.assertNull(result1);
 		Assert.assertNull(result2);
 		Assert.assertNull(result3);
+		Assert.assertEquals(null, result3);
 	}
 	
 	@Test

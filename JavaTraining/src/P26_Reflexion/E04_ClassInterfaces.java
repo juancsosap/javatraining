@@ -12,10 +12,14 @@ public class E04_ClassInterfaces {
 			Class<?> objClass = Class.forName("P26_Reflexion.Talk");
 			
 			Object obj = objClass.getDeclaredConstructor().newInstance();
-			Settable setter = (Settable) obj;
-			setter.set("Hello");
-			Printable printer = (Printable) obj;
-			printer.print();
+			if(obj instanceof Settable) {
+				Settable setter = (Settable) obj;
+				setter.set("Hello");
+			}
+			if(obj instanceof Printable) {
+				Printable printer = (Printable) obj;
+				printer.print();
+			}
 			System.out.println(objClass.getName());		
 			
 			System.out.println();
@@ -56,7 +60,7 @@ class Talk implements Printable, Settable {
 
 	@Override
 	public void set(Object obj) {
-		this.target = (String) obj;
+		this.target = obj.toString();
 	}
 	
 }
