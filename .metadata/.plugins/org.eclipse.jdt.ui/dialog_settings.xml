@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-1.8"/>
 	<item key="org.eclipse.jdt.ui.lastextjar" value="/usr/java/javafx-sdk-11.0.2/lib"/>
+	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="0"/>
 	<section name="RefactoringWizard.preview">
 		<item key="width" value="600"/>
 		<item key="height" value="400"/>
@@ -12,6 +13,7 @@
 		<item key="updateSimilarElements" value="false"/>
 		<item key="updateSimilarElementsMatchStrategy" value="1"/>
 		<item key="updateTextualMatches" value="false"/>
+		<item key="renameSubpackages" value="false"/>
 	</section>
 	<section name="SelfEncapsulateFieldWizard">
 		<item key="GenerateJavadoc" value="false"/>
