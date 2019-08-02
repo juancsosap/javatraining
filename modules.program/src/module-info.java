@@ -1,3 +1,4 @@
 module mod.program {
-	requires mod.test;
+	requires mod.maths;
+	uses modules.maths.Operator;
 }

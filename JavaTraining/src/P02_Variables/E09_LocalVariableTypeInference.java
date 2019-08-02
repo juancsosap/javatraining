@@ -2,6 +2,7 @@ package P02_Variables;
 
 public class E09_LocalVariableTypeInference {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 
 		int a = 10;
