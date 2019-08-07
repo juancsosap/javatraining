@@ -17,6 +17,8 @@ public class E04_LocalDateTime {
 		System.out.println(dateTime.format(DateTimeFormatter.ofPattern("dd/MMMM/yyyy")));
 		
 		System.out.println(dateTime.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).withLocale(Locale.FRANCE)));
+		System.out.println(dateTime.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).withLocale(Locale.ITALY)));
+		System.out.println(dateTime.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).withLocale(Locale.US)));
 	}
 
 }

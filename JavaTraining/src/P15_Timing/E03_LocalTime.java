@@ -20,7 +20,7 @@ public class E03_LocalTime {
 		times.add(LocalTime.now(ZoneId.of("America/Santiago")));
 		
 		times.add(LocalTime.of(10, 15));
-		times.add(LocalTime.of(21, 10, 15));
+		times.add(LocalTime.of(21, 5, 15));
 		times.add(LocalTime.of(21, 10, 15, 111));
 		times.add(LocalTime.ofSecondOfDay(10_000));
 		times.add(LocalTime.ofNanoOfDay(100_000_000));

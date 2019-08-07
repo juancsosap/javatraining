@@ -35,6 +35,10 @@ public class E01_ConcatText {
 		
 		System.out.println("Edad      : " + age + " años");
 		
+		// Concat Operator Order
+		System.out.println();
+		System.out.println(1 + 2 + " numbers " + 1 + 2 + " text " + (1 + 2));
+		
 	}
 
 }

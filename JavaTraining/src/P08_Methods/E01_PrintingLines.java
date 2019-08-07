@@ -7,15 +7,15 @@ public class E01_PrintingLines {
 		System.out.println(" Listados de Ciudades y Paices");
 		printFullLine();
 		
-		String[] cities = { "Santiago", "Lima", "Bogota", "Caracas", "Brazilia", "Buenos Aires" };
+		final String[] cities = { "Santiago", "Lima", "Bogota", "Caracas", "Brazilia", "Buenos Aires" };
 		printColumn("Ciudades", cities);
 		
-		String[] countries = { "Chile", "Perú", "Colombia", "Venezuela", "Brazil", "Argentina" };
+		final String[] countries = { "Chile", "Perú", "Colombia", "Venezuela", "Brazil", "Argentina" };
 		printColumn("Paices", countries);
 		
 		printFullLine();
 		
-		String[][] capitals = { {"Chile", "Santiago"},    {"Perú", "Lima"},       {"Bogota", "Colombia"}, 
+		final String[][] capitals = { {"Chile", "Santiago"},    {"Perú", "Lima"},       {"Bogota", "Colombia"}, 
 				                {"Venezuela", "Caracas"}, {"Brazil", "Brazilia"}, {"Argentina", "Buenos Aires" } };
 		printTable("Capitales", new String[] {"Country", "City"}, capitals);
 		

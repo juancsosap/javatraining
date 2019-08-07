@@ -36,6 +36,11 @@ public class E00_StringCommonPool {
 		String text7 = new String("This is a Text");
 		System.out.println(text1 == text7);
 
+		// The intern() method verify if the String value is present in the pool
+		//   and if it's return the reference from the pool, otherwise create it
+		String text8 = text7.intern();
+		System.out.println(text1 == text8);
+		
 	}
 
 }

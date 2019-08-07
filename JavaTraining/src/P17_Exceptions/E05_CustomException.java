@@ -8,6 +8,8 @@ public class E05_CustomException {
 			p.print("Message");
 		} catch (Exception e) {
 			throw new PrintingException("Printing Error");
+		} finally {
+			System.out.println("Program Ended");
 		}
 		
 	}

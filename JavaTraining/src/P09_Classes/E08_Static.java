@@ -1,7 +1,15 @@
 package P09_Classes;
 
+import static java.lang.Math.*;
+
 public class E08_Static {
 
+	private static int value = 20;
+	
+	static {
+		value = 10;
+	}
+	
 	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		System.out.println("Starting Program");
@@ -16,6 +24,8 @@ public class E08_Static {
 		System.out.println(t1.i1);
 		System.out.println(t1.i2);
 		
+		System.out.println(value);
+		
 		System.out.println("Ending Program");
 	}
 
@@ -28,7 +38,7 @@ class Test {
 	public final static int i2;
 	
 	Test() {
-		i1 = Math.random();
+		i1 = random();
 		System.out.println("Calling Test()");
 	}
 	

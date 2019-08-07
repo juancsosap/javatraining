@@ -32,7 +32,7 @@ class EmployeeIII {
 	private int id = 0;
 	public int getId() { return id; }
 	public void setId(int id) { this.id = id > 0 ? id : getId(); }
-
+	
 	private String name = "";
 	public String getName() { return name; }
 	public void setName(String name) { this.name = name.length() > 3 ? name : getName(); }

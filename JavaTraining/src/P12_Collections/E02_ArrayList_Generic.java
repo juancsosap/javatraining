@@ -49,7 +49,7 @@ public class E02_ArrayList_Generic {
 	}
 
 	private static List<Integer> removeList(List<Integer> original, List<Integer> invalid) {
-		List<Integer> result = new ArrayList<>(original);
+		var result = new ArrayList<>(original);
 		for(int value : invalid) {
 			while(result.contains(value)) {
 				int index = result.indexOf(value);

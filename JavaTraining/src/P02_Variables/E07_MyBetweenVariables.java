@@ -22,10 +22,19 @@ public class E07_MyBetweenVariables {
 		System.out.printf("Long to Double: %,f%n", (double) myLong);
 		
 		char myChar = '1';
+		int myInt = '1';
+		
+		byte myCharByte = '1';
+		short myCharShort = '1';
+		char myByteChar = (char) myCharByte; // Explicit casting is required
+		char myShortChar = (char) myCharShort; // Explicit casting is required
 		
 		System.out.println();
 		
 		System.out.printf("Char '1' to Integer: %d%n", (int) myChar);
+		System.out.printf("Char '1' to Integer: %d%n", myInt);
+		System.out.printf("Char '" + myByteChar + "' to Short: %d%n", myCharShort);
+		System.out.printf("Char '" + myShortChar + "' to Byte: %d%n", myCharByte);
 		
 		System.out.println();
 		

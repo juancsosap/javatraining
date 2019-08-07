@@ -22,7 +22,7 @@ public class E02_LocalDate {
 		ZoneId.getAvailableZoneIds().stream().filter(z -> z.startsWith("America")).forEach(System.out::println);
 		System.out.println();
 		
-		dates.add(LocalDate.of(2000, 1, 1));
+		dates.add(LocalDate.of(2000, 9, 1));
 		dates.add(LocalDate.of(2010, Month.MARCH, 15));
 		dates.add(LocalDate.ofYearDay(1950, 100));
 		

@@ -26,6 +26,18 @@ public class E04_ComparingStrings {
 		
 		System.out.println("Las Cadenas de Caracteres copiadas son afectadas cuando se modifica la original: " + (text1.equals(text3)) );
 		
+		System.out.println();
+		
+		// Verifying empty Strings
+		String txt = "";
+		System.out.println("Is Empty: " + txt.isEmpty() + " - Is Blank: " + txt.isBlank());
+		
+		txt = " ";
+		System.out.println("Is Empty: " + txt.isEmpty() + " - Is Blank: " + txt.isBlank());
+		
+		txt = " \t\r\n";
+		System.out.println("Is Empty: " + txt.isEmpty() + " - Is Blank: " + txt.isBlank());
+		
 	}
 
 }

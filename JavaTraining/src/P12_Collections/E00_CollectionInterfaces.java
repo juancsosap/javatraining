@@ -21,7 +21,7 @@ import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.LinkedTransferQueue;
 
-public class E01_CollectionInterfaces {
+public class E00_CollectionInterfaces {
 
 	@SuppressWarnings({ "rawtypes", "unused" })
 	public static void main(String[] args) {

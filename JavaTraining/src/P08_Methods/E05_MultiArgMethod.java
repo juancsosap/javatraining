@@ -2,7 +2,7 @@ package P08_Methods;
 
 public class E05_MultiArgMethod {
 
-	public static void main(String[] args) {
+	public static void main(String ... args) {
 		printer(false, "First", "Second", "...", "...", "...", "...", "...", "...", "Nineth", "Tenth");
 		
 		System.out.println();
