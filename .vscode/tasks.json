@@ -1,0 +1,31 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Java Compiler",
+            "command": "java",
+            "windows": {
+                "command": "javac"
+            },
+            "args": [
+                "${file}"
+            ]
+        },
+        {
+            "label": "Java Runner",
+            "command": "java",
+            "windows": {
+                "command": "java"
+            },
+            "args": [
+                "${fileBasenameNoExtension}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
