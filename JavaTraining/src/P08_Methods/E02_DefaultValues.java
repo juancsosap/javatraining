@@ -26,6 +26,7 @@ public class E02_DefaultValues {
 	private static void printData(String name, String surname, String rut, int age) { printData(name, surname, rut, age, false); }
 	private static void printData(String name, String surname, String rut) { printData(name, surname, rut, 0, false); }
 	private static void printData(String name, String surname) { printData(name, surname, "", 0, false); }
+	//private static void printData(String name, String rut) { printData(name, "", rut, 0, false); }
 	private static void printData(String name) { printData(name, "", "", 0, false); }
 	private static void printData() { printData("", "", "", 0, false); }
 

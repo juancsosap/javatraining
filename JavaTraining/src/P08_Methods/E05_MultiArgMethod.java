@@ -18,11 +18,15 @@ public class E05_MultiArgMethod {
 		
 		int[] numInt = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		printer(true, numInt, "Otro Object");
-		
+
+		System.out.println();
+
+		printer(true);
 	}
 	
 	// The Variable Length Arguments are optional and must be at the end
 	private static void printer(boolean index, String ... texts) {
+		System.out.println("String Printer");
 		int i=1;
 		for(String text : texts) {
 			if(index) System.out.printf("%-2s ", i++);
@@ -31,6 +35,7 @@ public class E05_MultiArgMethod {
 	}
 	
 	private static void printer(boolean index, Object ... objs) {
+		System.out.println("Object Printer");
 		int i=1;
 		for(Object obj : objs) {
 			if(index) System.out.printf("%-2s ", i++);
