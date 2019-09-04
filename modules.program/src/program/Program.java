@@ -38,7 +38,7 @@ public class Program {
 		Operator.get().stream()
 				.forEach(o -> {
 					System.out.println(o.getClass().getName());
-					System.out.println(o.name() + ": " + o.operate(5,5));
+					System.out.println(o.name() + ": " + o.operate(5,7));
 				});
 		
 	}

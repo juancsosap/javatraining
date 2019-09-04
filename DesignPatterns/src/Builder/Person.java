@@ -18,6 +18,14 @@ public class Person {
 	
 	public void setWeight(Double weight) { this.weight = weight; }
 	public Double getWeight() { return weight; }
+        
+        public Person(String name, String surname, Integer age, Double weight) {
+            this.setName(name);
+            this.setSurname(surname);
+            this.setAge(age);
+            this.setWeight(weight);
+        }
+        public Person() { this("", "", 0, 0.0); }
 	
 	public static PersonBuilder builder() {
 		return new PersonBuilder();
@@ -25,7 +33,7 @@ public class Person {
 	
 	public String toString() {
 		return this.name + ", " + this.surname.toUpperCase() +
-				" - " + this.age + " años y " + this.weight + " Kgs";
+				" - " + this.age + " aÃ±os y " + this.weight + " Kgs";
 	}
 
 }

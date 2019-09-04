@@ -12,13 +12,13 @@ public class _Program {
 		System.out.println(user.getUsername() + " have " + user.getPriviledge() + " Priviledges");
 		
 		if(user.getPriviledge().contains("Open"))
-			(new OpenPriviledgeDecorator(user)).open();
+			((OpenPriviledgeDecorator) user).open();
 		
 		if(user.getPriviledge().contains("Edit"))
-			(new EditPriviledgeDecorator(user)).edit();
+			((EditPriviledgeDecorator) user).edit();
 		
 		if(user.getPriviledge().contains("Execute"))
-			(new ExecutePriviledgeDecorator(user)).execute();
+			((ExecutePriviledgeDecorator) user).execute();
 		
 	}
 

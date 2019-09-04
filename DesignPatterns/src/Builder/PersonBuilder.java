@@ -6,22 +6,22 @@ public class PersonBuilder {
 	
 	public PersonBuilder() { this.person = new Person(); }
 	
-	public PersonBuilder setName(String name) { 
+	public PersonBuilder name(String name) { 
 		this.person.setName(name);
 		return this;
 	}
 	
-	public PersonBuilder setSurname(String surname) { 
+	public PersonBuilder surname(String surname) { 
 		this.person.setSurname(surname);
 		return this;
 	}
 	
-	public PersonBuilder setAge(Integer age) { 
+	public PersonBuilder age(Integer age) { 
 		this.person.setAge(age);
 		return this;
 	}
 	
-	public PersonBuilder setWeight(Double weight) { 
+	public PersonBuilder weight(Double weight) { 
 		this.person.setWeight(weight);
 		return this;
 	}
