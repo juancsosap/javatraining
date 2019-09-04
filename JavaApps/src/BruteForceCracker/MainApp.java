@@ -14,7 +14,7 @@ public class MainApp extends Application {
 	public void start(Stage stage) throws Exception {
 		MainPane pane = new MainPane(10);
 		
-		Scene scene = new Scene(pane, 300, 285);
+		Scene scene = new Scene(pane, 300, 300);
 		
 		stage.setOnShowing(we -> MainControler.initialLoad(pane));
 		
