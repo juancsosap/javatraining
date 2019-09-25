@@ -8,7 +8,7 @@ public class E01_GenericBox {
 		
 		System.out.println(box1.get());
 		
-		Box<Integer> box2 = new Box<>(5);
+		Box box2 = new Box(5);
 		
 		System.out.println(box2.get());
 		
@@ -16,7 +16,7 @@ public class E01_GenericBox {
 			public String name;
 		}
 		
-		Box<Person> box3 = new Box<>(new Person());
+		var box3 = new Box<>(new Person());
 		
 		box3.get().name = "Juan";
 		

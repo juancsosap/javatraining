@@ -18,7 +18,10 @@ public class E12_IteratingCollections {
 		employees.add(new Employee(4, "Maria Fernandez", "IT"));
 		employees.add(new Employee(5, "Laura Gomez", "Trainer"));
 		
-		System.out.print("FIRST: ");
+                System.out.println("All: ");
+		employees.forEach(Employee.PRINT);
+                
+		System.out.println("\nFIRST: ");
 		System.out.println(employees.stream().findFirst().get());
 		
 		System.out.println("\nTRAINERS: ");

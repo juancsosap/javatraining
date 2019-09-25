@@ -24,7 +24,7 @@ public class E07_OptionalResultStream {
 		else
 			System.out.println("Not value found");
 		
-		nums.stream().filter(d -> d > 5).findFirst().ifPresent(System.out::println);;
+		nums.stream().filter(d -> d > 5).findFirst().ifPresent(System.out::println);
 		
 		// JAVA9
 		//nums.stream().filter(d -> d > 10).findFirst().ifPresentOrElse(System.out::println, () -> System.out.println("Not value found"));	

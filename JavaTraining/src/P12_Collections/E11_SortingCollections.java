@@ -88,6 +88,8 @@ public class E11_SortingCollections {
 			return this.id + " : " + this.name + " - " + this.role;
 		}
 		
+                /*
+                
 		public static final Comparator<Employee> BY_ID = new EmployeeIdComparator();
 		private static class EmployeeIdComparator implements Comparator<Employee> {
 
@@ -107,8 +109,10 @@ public class E11_SortingCollections {
 			
 		};
 		
-		//public static final Comparator<Employee> BY_ID = (e1, e2) -> e1.compareTo(e2);
-		//public static final Comparator<Employee> BY_NAME = (e1, e2) -> e1.name.compareTo(e2.name);
+                */
+                
+		public static final Comparator<Employee> BY_ID = (e1, e2) -> e1.compareTo(e2);
+		public static final Comparator<Employee> BY_NAME = (e1, e2) -> e1.name.compareTo(e2.name);
 		public static final Comparator<Employee> BY_ROLE = (e1, e2) -> e1.role.compareTo(e2.role);
 		
 		

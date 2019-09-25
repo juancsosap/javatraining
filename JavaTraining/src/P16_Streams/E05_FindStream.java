@@ -9,8 +9,8 @@ public class E05_FindStream {
 		
 		List<Integer> nums = Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
 		
-		int value = nums.stream().filter(d -> d < 5)
-		                        .peek(d -> System.out.print(d + " : "))
+		int value = nums.stream().peek(d -> System.out.print(d + " : "))
+		                        .filter(d -> d > 5)
 		                        .map(d -> d + 1)
 		                        .findFirst()
 		                        .get();

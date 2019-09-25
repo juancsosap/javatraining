@@ -3,7 +3,7 @@ package P11_Interfaces;
 import java.util.Scanner;
 import java.util.function.UnaryOperator;
 
-public class E12_UnaryOperator {
+public class E13_UnaryOperator {
 
 	public static void main(String[] args) {
 		

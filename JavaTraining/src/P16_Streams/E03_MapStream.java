@@ -11,7 +11,7 @@ public class E03_MapStream {
 		List<Integer> nums = Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
 		
 		nums.stream().filter(d -> d < 5)
-					 .map(d -> d * d)
+			     .map(d -> d * d)
 		             .forEach(System.out::println);
 		
 		System.out.println();
@@ -22,12 +22,16 @@ public class E03_MapStream {
 		words.stream().flatMap(n -> Stream.of(n.split("")))
                       .forEach(c -> System.out.print(c + "-"));
 
+                System.out.println();
+                
 		words.stream().map(n -> n.toUpperCase())
         			  .forEach(System.out::println);
 		
 		String texto = words.stream().reduce((t1, t2) -> t1 + t2).get();
 		System.out.println(texto);
 		
+                int q = words.stream().map(p -> p.length()).reduce((l1, l2) -> l1 + l2).get();
+                System.out.println(q);
 	}
 
 }

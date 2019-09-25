@@ -100,29 +100,29 @@ public class E10_CollectorsStream {
 		
 	}
 	
-	private static class LetterCountCollector implements Collector<String, int[], String> {
+	private static class LetterCountCollector implements Collector<String, Integer, String> {
 
 		@Override
-		public Supplier<int[]> supplier() {
-			return () -> new int[1];
+		public Supplier<Integer> supplier() {
+			return () -> 0;
 		}
 
 		@Override
-		public BiConsumer<int[], String> accumulator() {
-			return (data, in) -> data[0] += in.length();
+		public BiConsumer<Integer, String> accumulator() {
+			return (data, in) -> data += in.length();
 		}
 
 		@Override
-		public BinaryOperator<int[]> combiner() {
+		public BinaryOperator<Integer> combiner() {
 			return (data1, data2) -> {
-				data1[0] += data2[0];
+				data1 += data2;
 				return data1;
 			};
 		}
 
 		@Override
-		public Function<int[], String> finisher() {
-			return (data) -> data[0] + "";
+		public Function<Integer, String> finisher() {
+			return (data) -> data + "";
 		}
 
 		@Override

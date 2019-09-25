@@ -25,6 +25,7 @@ public class E08_TreeSet {
 		users.add(new Person("Pepe", 20));
 		users.add(new Person("Ana", 20));
 		users.add(new Person("Maria", 40));
+                users.add(new Person("Juan", 10));
 		
 		for(Person user : users) {
 			System.out.println(user.nombre + " : " + user.edad);

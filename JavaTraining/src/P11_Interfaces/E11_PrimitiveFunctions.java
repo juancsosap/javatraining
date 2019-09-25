@@ -6,7 +6,7 @@ import java.util.function.ToDoubleFunction;
 import java.util.function.ToIntFunction;
 import java.util.function.ToLongFunction;
 
-public class E10_PrimitiveFunctions {
+public class E11_PrimitiveFunctions {
 
 	public static void main(String[] args) {
 		

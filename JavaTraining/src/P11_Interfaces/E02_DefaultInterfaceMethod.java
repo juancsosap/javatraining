@@ -28,6 +28,7 @@ public class E02_DefaultInterfaceMethod {
 
 	}
 	
+        @FunctionalInterface
 	interface IOperation {
 		
 		public double calculate(double num1, double num2);
@@ -44,6 +45,11 @@ public class E02_DefaultInterfaceMethod {
 		public double calculate(double num1, double num2) {
 			return num1 + num2;
 		}
+                
+                @Override
+                public String getName() {
+                    return "ADDITION";
+                }
 		
 	}
 

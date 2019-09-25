@@ -11,7 +11,8 @@ public class E04_PeekStream {
 		
 		nums.stream().filter(d -> d < 5)
 		             .peek(d -> System.out.print(d + " : "))
-					 .map(d -> d * d)
+			     .map(d -> d * d)
+                             .filter(d -> d > 5)
 		             .forEach(System.out::println);
 		
 	}

@@ -1,6 +1,7 @@
 package P12_Collections;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 public class E07_HashSet {
@@ -34,7 +35,7 @@ public class E07_HashSet {
 		
 	}
 	
-	private static class Person {
+	private static class Person implements Comparable<Person> {
 		
 		public String nombre;
 		public int edad;
@@ -42,6 +43,11 @@ public class E07_HashSet {
 		public Person(String nombre, int edad) {
 			this.nombre = nombre;
 			this.edad = edad;
+		}
+                
+                @Override
+		public int compareTo(Person o) {
+			return this.edad > o.edad  ? -1 : this.edad < o.edad ? 1 : this.nombre.compareTo(o.nombre);
 		}
 		
 	}

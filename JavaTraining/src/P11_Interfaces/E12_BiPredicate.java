@@ -3,7 +3,7 @@ package P11_Interfaces;
 import java.util.Scanner;
 import java.util.function.BiPredicate;
 
-public class E11_BiPredicate {
+public class E12_BiPredicate {
 
 	public static void main(String[] args) {
 		
